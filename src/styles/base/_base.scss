@@ -3,6 +3,7 @@
 *::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -10,6 +11,78 @@ html {
 }
 
 body {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.5;
+    font-family: $primaryFont;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $page-padding;
+    background: $sky-blue;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $nav-height; // Add a height especially when fixed positioned
+    &__logo, &__links {
+        flex: 1;
+    }
+    &__logo {
+        font-size: 2.4rem;
+        font-weight: 900;
+        font-style: italic;
+        font-family: $primaryFont;
+        color: $dark-blue;
+    }
+    &__links {
+        display: flex;
+        justify-content: flex-end;
+        & > *:not(:last-child){
+            margin-right: 2rem;
+        }
+        // text-align: right  
+    }
+}
+
+h2 {
+    font-size: 4.8rem;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+h3 {
+    font-size: 3.2rem;
+    line-height: 1.25;
+    font-weight: 500;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    &:link, &:active {
+        color: inherit;
+        text-decoration: none;
+    }
+    &:hover, &:focus {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+.button {
+    padding: .9rem 2.7rem;
+    background: $dark-blue;
+    color: white;
+    border-radius: 5rem;
     font-size: 1.6rem;
-    line-height: 1.2;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
 }
