@@ -30,6 +30,8 @@ body {
     left: 0;
     width: 100%;
     height: $nav-height; // Add a height especially when fixed positioned
+    transition: background .5s, padding .3s;
+    z-index: 1000;
     &__logo, &__links {
         flex: 1;
     }
@@ -51,10 +53,15 @@ body {
 
     .progress-indicator {
         position: absolute;
-        bottom: 0;
+        top: 0;
         left: 0;
         height: 6px;
         background: $dark-blue;
+    }
+
+    &.scrolling {
+        background: white;
+        padding-top: 6px;
     }
 }
 
@@ -100,4 +107,12 @@ img {
 .container {
     width: 100%;
     max-width: 500px;
+}
+
+
+
+// Keyframes
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
