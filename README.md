@@ -1,2 +1,2 @@
-# scaffolding-webpack-project
+# Brux
 A simple scaffolding for webpack based projects
